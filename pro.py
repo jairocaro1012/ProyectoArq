@@ -8,7 +8,7 @@ print('working')
 x="2"
 y="pp"
 
-
+#--hola desde putty--#
 #--hola--#
 url= "https://visa-signature.com/co/ofertas-exclusivas"
 req=requests.get(url)
