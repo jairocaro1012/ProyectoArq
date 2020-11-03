@@ -8,6 +8,8 @@ print('working')
 x="2"
 y="pp"
 
+
+#--hola--#
 url= "https://visa-signature.com/co/ofertas-exclusivas"
 req=requests.get(url)
 soup=BeautifulSoup(req.content,"html.parser")
