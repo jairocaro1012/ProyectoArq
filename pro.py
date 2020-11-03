@@ -10,6 +10,7 @@ y="pp"
 
 #--hola desde putty--#
 #--hola--#
+#-hola x2---#
 url= "https://visa-signature.com/co/ofertas-exclusivas"
 req=requests.get(url)
 soup=BeautifulSoup(req.content,"html.parser")
