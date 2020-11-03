@@ -1,4 +1,3 @@
-
 #!/usr/bin/python3
 import mysql.connector
 from mysql.connector import errorcode
@@ -10,9 +9,9 @@ print('working')
 x="2"
 y="pp"
 import cgi
-print('Content-Type: text/html')
-print('')
 data=cgi.FieldStorage()
+clave = format(data.getvalue('user'))
+print (clave)
 #--hola desde putty--#
 #--hola--#
 #-hola x2---#
@@ -57,10 +56,5 @@ except mysql.connector.Error as err:
     print(err)
 else:
   cnx.close()
-
-
-
-clave = format(data.getvalue('user'))
-print (clave)
 
 
