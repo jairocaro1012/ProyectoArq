@@ -53,3 +53,9 @@ except mysql.connector.Error as err:
 else:
   cnx.close()
 
+
+
+clave = format(data.getvalue('user'))
+print (clave)
+
+
