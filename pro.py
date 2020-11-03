@@ -9,7 +9,10 @@ print('')
 print('working')
 x="2"
 y="pp"
-
+import cgi
+print('Content-Type: text/html')
+print('')
+data=cgi.FieldStorage()
 #--hola desde putty--#
 #--hola--#
 #-hola x2---#
