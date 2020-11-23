@@ -2,7 +2,9 @@
 import mysql.connector
 from mysql.connector import errorcode
 import requests
+from jinja2 import Template
 from bs4 import BeautifulSoup
+from flask import render_template
 print('Content-Type: text/plain')
 print('')
 print('working')
@@ -34,6 +36,11 @@ print(total)
 print(total1)
 print(total2[0])
 print(total3)
+
+def index():
+  nombre="home!"
+  return render_template("index2.html",nombre=nombre)
+
 try:
         cnx = mysql.connector.connect(user='Jairo', password='Jairo1012#',
                                       host='127.0.0.1',
