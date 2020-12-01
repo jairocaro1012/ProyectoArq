@@ -68,12 +68,11 @@ except mysql.connector.Error as err:
 else:
   cnx.close()
 
-
 # sanity check route
 @app.route('/prueba', methods=['GET'])
 def ping_pong():
-    for i in total:
-      return jsonify({'nombre': total[i]})
+
+    return jsonify({'nombre': 'hola'})
 
 
 if __name__ == '__main__':
