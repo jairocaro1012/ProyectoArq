@@ -7,6 +7,14 @@ from bs4 import BeautifulSoup
 from flask import render_template
 from flask import Flask, jsonify
 from flask_cors import CORS
+
+# instantiate the app
+app = Flask(__name__)
+app.config.from_object(__name__)
+
+# enable CORS
+CORS(app, resources={r'/*': {'origins': '*'}})
+
 print('Content-Type: text/plain')
 print('')
 print('working')
@@ -65,14 +73,6 @@ except mysql.connector.Error as err:
     print(err)
 else:
   cnx.close()
-
-# instantiate the app
-app = Flask(__name__)
-app.config.from_object(__name__)
-
-# enable CORS
-CORS(app, resources={r'/*': {'origins': '*'}})
-
 
 # sanity check route
 @app.route('/prueba', methods=['GET'])
