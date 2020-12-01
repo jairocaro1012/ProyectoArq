@@ -42,8 +42,8 @@ for i in datos:
 
 print(total)
 print(total1)
-print(total2[0])
-print(total3)
+print(total2)
+
 
 try:
         cnx = mysql.connector.connect(user='Jairo', password='Jairo1012#',
@@ -68,10 +68,12 @@ except mysql.connector.Error as err:
 else:
   cnx.close()
 
+
 # sanity check route
 @app.route('/prueba', methods=['GET'])
 def ping_pong():
-    return jsonify({'nombre': 'hola'})
+    for i in total:
+      return jsonify({'nombre': total[i]})
 
 
 if __name__ == '__main__':
