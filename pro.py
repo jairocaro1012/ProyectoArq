@@ -6,6 +6,7 @@ from jinja2 import Template
 from bs4 import BeautifulSoup
 from flask import Flask, jsonify
 from flask_cors import CORS
+print('Content-Type: text/plain')
 
 # instantiate the app
 app = Flask(__name__)
@@ -14,9 +15,8 @@ app.config.from_object(__name__)
 # enable CORS
 CORS(app, resources={r'/*': {'origins': '*'}})
 
-print('Content-Type: text/plain')
-print('')
-print('working')
+
+
 x="2"
 y="pp"
 import cgi
@@ -45,10 +45,6 @@ print(total)
 print(total1)
 print(total2[0])
 print(total3)
-
-def index():
-  nombre="home!"
-  return render_template("index2.html",nombre=nombre)
 
 try:
         cnx = mysql.connector.connect(user='Jairo', password='Jairo1012#',
