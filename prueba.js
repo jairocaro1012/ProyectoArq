@@ -10,6 +10,7 @@ var app = new Vue({
                     this.nombre = response.data.nombre;
                     console.log(response.data)
                     console.log(this.nombe);
+                    document.getElementById("prueba").innerHTML =this.nombre;
                 })
                 .catch(error => console.error(error));
         }
