@@ -5,6 +5,8 @@ import requests
 from jinja2 import Template
 from bs4 import BeautifulSoup
 from flask import render_template
+from flask import Flask, jsonify
+from flask_cors import CORS
 print('Content-Type: text/plain')
 print('')
 print('working')
@@ -64,4 +66,20 @@ except mysql.connector.Error as err:
 else:
   cnx.close()
 
+# instantiate the app
+app = Flask(__name__)
+app.config.from_object(__name__)
+
+# enable CORS
+CORS(app, resources={r'/*': {'origins': '*'}})
+
+
+# sanity check route
+@app.route('/prueba', methods=['GET'])
+def ping_pong():
+    return jsonify({'nombre': 'hola'})
+
+
+if __name__ == '__main__':
+    app.run(host="0.0.0.0")
 
