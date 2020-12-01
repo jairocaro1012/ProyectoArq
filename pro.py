@@ -4,7 +4,6 @@ from mysql.connector import errorcode
 import requests
 from jinja2 import Template
 from bs4 import BeautifulSoup
-from flask import render_template
 from flask import Flask, jsonify
 from flask_cors import CORS
 
