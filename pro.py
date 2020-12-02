@@ -16,7 +16,6 @@ app.config.from_object(__name__)
 CORS(app, resources={r'/*': {'origins': '*'}})
 
 
-
 x="2"
 y="pp"
 import cgi
@@ -78,7 +77,8 @@ def ping_pong():
     arreglo+="["
     lon=len(total)
     i1=1
-    for i in total:
+    for marca in total:
+      arreglo+=json.dumps(marca.__dict__)
       if i1+lon:
         arreglo+=","
         i1=i1+1
