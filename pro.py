@@ -88,10 +88,6 @@ try:
         if j<10:
           obj[j]=row[3]
           j=j+1
-        else:
-          break
-        
-
 
 except mysql.connector.Error as e:
     print("Error reading data from MySQL table", e)
