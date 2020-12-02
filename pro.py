@@ -44,7 +44,8 @@ print(total1[0])
 print(total1)
 print(total2)
 print(type(total1))
-
+obj=[]
+j=0
 
 try:
         cnx = mysql.connector.connect(user='Jairo', password='Jairo1012#',
@@ -85,8 +86,9 @@ try:
         print("Name = ", row[1])
         print("Price  = ", row[2])
         print("Purchase date  = ", row[3], "\n")
+     
 
-    obj=row[1]
+    obj=row[3]
 
       
 
