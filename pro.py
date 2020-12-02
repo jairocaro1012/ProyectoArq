@@ -5,6 +5,7 @@ import requests
 from bs4 import BeautifulSoup
 from flask import Flask, jsonify ,json
 from flask_cors import CORS
+import numpy as np;
 print('Content-Type: text/plain')
 
 # instantiate the app
@@ -73,8 +74,9 @@ else:
 # sanity check route
 @app.route('/prueba', methods=['GET'])
 def ping_pong():
-
-    obj = json.loads(total)
+    
+    obj=np.array(total)
+    obj = json.loads(obj)
     return jsonify({'nombre': obj})
 
 
