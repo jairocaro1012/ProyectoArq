@@ -5,7 +5,7 @@ var app = new Vue({
     },
     methods: {
         f: function () {
-            axios.get("http://ec2-18-204-8-148.compute-1.amazonaws.com:5000/prueba")
+            axios.get("http://ec2-35-175-130-185.compute-1.amazonaws.com:5000/prueba")
                 .then(response => {
                     this.nombre = response.data.nombre;
                     this.datos2=response.data.datos2;
