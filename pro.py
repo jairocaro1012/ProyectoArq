@@ -85,6 +85,7 @@ try:
         print("Name = ", row[1])
         print("Price  = ", row[2])
         print("Purchase date  = ", row[3], "\n")
+        print(len(records))
      
 except mysql.connector.Error as e:
     print("Error reading data from MySQL table", e)
