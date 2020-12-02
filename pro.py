@@ -71,22 +71,16 @@ except mysql.connector.Error as err:
 else:
   cnx.close()
 
+obj=[]
 
 
 # sanity check route
 @app.route('/prueba', methods=['GET'])
 def ping_pong():
-    arreglo=""
-    arreglo+="["
-    lon=len(total)
-    i1=1
-    for marca in total:
-      arreglo+=json.dumps(total[i])
-      if i1+lon:
-        arreglo+=","
-        i1=i1+1
-    arreglo+="]"
-    obj= json.loads(arreglo)    
+
+    for i in total:
+      obj[i]=json.load(total[i])
+
     return jsonify({'nombre': obj})
 
 
