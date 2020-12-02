@@ -85,8 +85,11 @@ try:
         print("Name = ", row[1])
         print("Price  = ", row[2])
         print("Purchase date  = ", row[3], "\n")
-        obj[j]=row[3]
-        j=j+1
+        if j<11:
+          obj[j]=row[3]
+          j=j+1
+        else:
+          break
         
 
 
