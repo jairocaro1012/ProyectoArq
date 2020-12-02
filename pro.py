@@ -87,9 +87,8 @@ try:
         print("Name = ", row[1])
         print("Price  = ", row[2])
         print("Purchase date  = ", row[3], "\n")
-        if j<8 :
-          obj[j]=row[1]
-          j=j+1
+        
+      
 
 
 except mysql.connector.Error as e:
