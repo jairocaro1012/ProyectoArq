@@ -89,6 +89,8 @@ try:
           obj[j]=row[3]
           j=j+1
 
+    
+
 except mysql.connector.Error as e:
     print("Error reading data from MySQL table", e)
 finally:
@@ -97,6 +99,8 @@ finally:
         cursor.close()
         print("MySQL connection is closed")
 
+
+print(obj)
 
 # sanity check route
 @app.route('/prueba', methods=['GET'])
