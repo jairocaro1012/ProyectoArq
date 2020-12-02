@@ -97,7 +97,7 @@ finally:
 # sanity check route
 @app.route('/prueba', methods=['GET'])
 def ping_pong():
-    return jsonify({'nombre': row[0]})
+    return jsonify({'nombre': row})
 
 
 if __name__ == '__main__':
