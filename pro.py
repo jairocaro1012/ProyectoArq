@@ -85,10 +85,7 @@ try:
         print("Name = ", row[1])
         print("Price  = ", row[2])
         print("Purchase date  = ", row[3], "\n")
-        if j<10:
-          obj[j]=row[3]
-          j=j+1
-
+     
 except mysql.connector.Error as e:
     print("Error reading data from MySQL table", e)
 finally:
@@ -101,9 +98,7 @@ print(obj[1])
 # sanity check route
 @app.route('/prueba', methods=['GET'])
 def ping_pong():
-
-    obj = json.loads(obj)
-    return jsonify({'nombre': obj})
+    return jsonify({'nombre': row[0]})
 
 
 if __name__ == '__main__':
