@@ -97,7 +97,7 @@ finally:
         cursor.close()
         print("MySQL connection is closed")
 
-print(obj[0])
+print(obj[1])
 # sanity check route
 @app.route('/prueba', methods=['GET'])
 def ping_pong():
