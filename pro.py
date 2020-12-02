@@ -45,7 +45,7 @@ print(total1)
 print(total2)
 
 total=np.array(total)
-print(type(total))
+print(type(total1[0]))
 
 
 try:
@@ -78,10 +78,10 @@ obj=[]
 @app.route('/prueba', methods=['GET'])
 def ping_pong():
 
-    for i in total:
-      obj[i]=json.load(total[i])
+   
+    obj=json.load(total1[0])
 
-    return jsonify({'nombre': total1[0]})
+    return jsonify({'nombre': obj})
 
 
 if __name__ == '__main__':
