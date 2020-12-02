@@ -45,6 +45,7 @@ print(total1)
 print(total2)
 print(type(total1))
 
+obj=[]
 
 try:
         cnx = mysql.connector.connect(user='Jairo', password='Jairo1012#',
@@ -82,9 +83,10 @@ try:
     print("\nPrinting each laptop record")
     for row in records:
         print("Id = ", row[0], )
-        total[row]=row[1]
+        print("Name = ", row[1])
         print("Price  = ", row[2])
         print("Purchase date  = ", row[3], "\n")
+        obj[0]=row[1]
 
 except mysql.connector.Error as e:
     print("Error reading data from MySQL table", e)
