@@ -2,6 +2,8 @@ var app = new Vue({
     el: '#app',
     data: {
         datos: null,
+        nombre: null,
+        datos2:null
     },
     methods: {
         f: function () {
@@ -10,7 +12,7 @@ var app = new Vue({
                     this.nombre = response.data.nombre;
                     this.datos2=response.data.datos2;
                     console.log(response.data)
-                    console.log(this.nombe);
+                    console.log(this.nombre);
                     document.getElementById("prueba").innerHTML =this.nombre;
                     document.getElementById("prueba1").innerHTML =this.datos2;
                     
