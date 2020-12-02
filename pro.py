@@ -105,10 +105,7 @@ finally:
 @app.route('/prueba', methods=['GET'])
 def ping_pong():
 
-   
-    obj=json.loads(total1[0])
-
-    return jsonify({'nombre': obj})
+    return jsonify({'nombre': 'hola'})
 
 
 if __name__ == '__main__':
