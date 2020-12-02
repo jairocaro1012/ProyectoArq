@@ -100,13 +100,14 @@ finally:
         print("MySQL connection is closed")
 
 
-print(obj)
+print(obj[0])
 
 # sanity check route
 @app.route('/prueba', methods=['GET'])
 def ping_pong():
 
-    return jsonify({'nombre': obj})
+     json_str = json.dumps(obj)
+    return jsonify({'nombre': json_str})
 
 
 if __name__ == '__main__':
