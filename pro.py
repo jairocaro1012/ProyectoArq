@@ -79,7 +79,7 @@ obj=[]
 def ping_pong():
 
    
-    obj=json.load(total1[0])
+    obj=json.loads(total1[0])
 
     return jsonify({'nombre': obj})
 
