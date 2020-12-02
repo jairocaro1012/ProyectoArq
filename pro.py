@@ -89,8 +89,6 @@ try:
           obj[j]=row[3]
           j=j+1
 
-    
-
 except mysql.connector.Error as e:
     print("Error reading data from MySQL table", e)
 finally:
@@ -99,15 +97,13 @@ finally:
         cursor.close()
         print("MySQL connection is closed")
 
-
 print(obj[0])
-
 # sanity check route
 @app.route('/prueba', methods=['GET'])
 def ping_pong():
 
-     json_str = json.dumps(obj)
-    return jsonify({'nombre': json_str})
+    obj = json.loads(obj)
+    return jsonify({'nombre': obj})
 
 
 if __name__ == '__main__':
