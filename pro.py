@@ -3,7 +3,7 @@ import mysql.connector
 from mysql.connector import errorcode
 import requests
 from bs4 import BeautifulSoup
-from flask import Flask, jsonify
+from flask import Flask, jsonify ,json
 from flask_cors import CORS
 print('Content-Type: text/plain')
 
@@ -84,7 +84,7 @@ def ping_pong():
         arreglo+ ","
         i1=i1+1
     arreglo="]"
-    obj=json.loands(arreglo)
+    obj=json.loads(arreglo)
     return jsonify({'nombre': obj})
 
 
