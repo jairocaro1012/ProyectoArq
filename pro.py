@@ -44,6 +44,9 @@ print(total)
 print(total1)
 print(total2)
 
+total=np.array(total)
+print(type(total))
+
 
 try:
         cnx = mysql.connector.connect(user='Jairo', password='Jairo1012#',
