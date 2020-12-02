@@ -45,8 +45,6 @@ print(total1)
 print(total2)
 print(type(total1))
 
-obj=[]
-j=0
 
 try:
         cnx = mysql.connector.connect(user='Jairo', password='Jairo1012#',
@@ -87,7 +85,9 @@ try:
         print("Name = ", row[1])
         print("Price  = ", row[2])
         print("Purchase date  = ", row[3], "\n")
-        
+
+    obj=row[1]
+
       
 
 
@@ -104,7 +104,7 @@ finally:
 @app.route('/prueba', methods=['GET'])
 def ping_pong():
 
-    return jsonify({'nombre': 'hola'})
+    return jsonify({'nombre': obj})
 
 
 if __name__ == '__main__':
