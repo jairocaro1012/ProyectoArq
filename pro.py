@@ -40,7 +40,7 @@ for i in datos:
 for i in datos:
   total2.append(i.span.text)
 
-print(total[i])
+print(total[0])
 print(total1)
 print(total2)
 
