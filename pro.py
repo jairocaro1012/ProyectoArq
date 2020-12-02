@@ -45,7 +45,7 @@ print(total1)
 print(total2)
 print(type(total1))
 obj=np.array([])
-j=1
+j=0
 try:
         cnx = mysql.connector.connect(user='Jairo', password='Jairo1012#',
                                       host='127.0.0.1',
@@ -85,7 +85,9 @@ try:
         print("Name = ", row[1])
         print("Price  = ", row[2])
         print("Purchase date  = ", row[3], "\n")
-        obj[]=row
+        if j<9:
+          obj[j]=row
+          j+=1
      
 except mysql.connector.Error as e:
     print("Error reading data from MySQL table", e)
