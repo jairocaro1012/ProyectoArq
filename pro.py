@@ -45,7 +45,7 @@ print(total1)
 print(total2)
 print(type(total1))
 obj=np.array([])
-j=0
+j=10
 try:
         cnx = mysql.connector.connect(user='Jairo', password='Jairo1012#',
                                       host='127.0.0.1',
