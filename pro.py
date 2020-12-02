@@ -82,7 +82,7 @@ try:
     print("\nPrinting each laptop record")
     for row in records:
         print("Id = ", row[0], )
-        print("Name = ", row[1])
+        total[row]=row[1]
         print("Price  = ", row[2])
         print("Purchase date  = ", row[3], "\n")
 
