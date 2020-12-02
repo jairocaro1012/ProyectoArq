@@ -81,7 +81,7 @@ def ping_pong():
     lon=len(total)
     i1=1
     for marca in total:
-      arreglo+=json.dumps(marca.__dict__)
+      arreglo+=json.dumps(total[i])
       if i1+lon:
         arreglo+=","
         i1=i1+1
