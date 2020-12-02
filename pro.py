@@ -74,17 +74,7 @@ else:
 @app.route('/prueba', methods=['GET'])
 def ping_pong():
 
-    arreglo=""
-    arreglo +="["
-    lon=len(total)
-    i1=1
-    for i in total:
-      arreglo+=json.dumps(i.__dict__)
-      if i1<lon:
-        arreglo+ ","
-        i1=i1+1
-    arreglo="]"
-    obj=json.loads(arreglo)
+    obj = json.loads(total)
     return jsonify({'nombre': obj})
 
 
