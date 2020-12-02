@@ -71,7 +71,7 @@ except mysql.connector.Error as err:
 else:
   cnx.close()
 
-obj=[]
+
 
 
 # sanity check route
