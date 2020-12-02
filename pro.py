@@ -40,7 +40,7 @@ for i in datos:
 for i in datos:
   total2.append(i.span.text)
 
-print(total[0])
+print(total1[0])
 print(total1)
 print(total2)
 
@@ -81,7 +81,7 @@ def ping_pong():
     for i in total:
       obj[i]=json.load(total[i])
 
-    return jsonify({'nombre': total[i]})
+    return jsonify({'nombre': total1[0]})
 
 
 if __name__ == '__main__':
